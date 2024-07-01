@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
  * @author LAB-USR-LNORTE
  */
 @WebServlet(name = "TestServlet", urlPatterns = {"/TestServlet"})
-public class TestServlet extends HttpServlet {
+public class PagoServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

@@ -77,3 +77,46 @@
     </section>
     <!-- /.sidebar -->
 </aside>
+        
+        <!-- inicio de codigo para insertar el chatbot -->
+        <script type="text/javascript">
+            
+            // definir objeto
+            window._be = window._be || {};
+            
+            // id del chatbot
+            window.__be.id = "6681d44df95a26000705f8e8"; 
+            
+            // definir objeto
+            var BE_API = window.BE_API || {};
+            
+            // abrir el chatbot despues de cargar la pagina
+            BE_API.onLoad = function () {
+                BE_API.openChatWindow();
+            };
+            
+            // creacion del elemento que contiene el script para el plugin 
+            (function () {
+               
+                var be = document.createElement('script');  // crear elemento script
+                
+                be.type = 'text/javascript'; // tipo de script
+                be.async = true;    // cargar el script de forma asincrona
+                
+                // url del script 'plugin.js'
+                be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.botengine.ai/widget/plugin.js';
+                
+                // colocar el script antes del primer elemento del tipo 'script'
+                var s = document.getElementsByTagName('script')[0]; 
+                s.parentNode.insertBefore(be, s);
+            })();
+        </script>
+        
+        <!-- Estilo para el ancho del elemento chatbot -->
+        <style type="text/css">
+            #botengine-chat {
+                width: 100% !important;
+            }
+        </style>
+        
+        <!-- fin de codigo chatbot -->

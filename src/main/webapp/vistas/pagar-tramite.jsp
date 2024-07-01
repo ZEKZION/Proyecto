@@ -16,25 +16,26 @@
     <!-- apartado de java dentro del JSP para hacer el ingreso correcto al Index -->
     <% if (session.getAttribute("usuario") !=null) { %>
         <html>
-        <head>
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Sistema Incidencias| Inicio</title>
-            <!-- apartado responsive -->
-            <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"  name="viewport">
+     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sistema Incidencias| Inicio</title>
+        <!-- apartado responsive -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <!-- Iconos -->
+        <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css"/>
 
-            <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-            <!-- Font Awesome -->
-            <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-            <!-- Iconos -->
-            <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
-            <!-- Theme style -->
-            <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
-            <!-- seleccion de la skin del adminLTE -->
-            <link rel="stylesheet" href="dist/css/skins/skin-green.min.css">
-            <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-        </head>
+        <!-- seleccion de la skin del adminLTE -->
+        <link rel="stylesheet" href="dist/css/skins/skin-green.min.css">
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    </head>
+
 
         <body class="hold-transition skin-green sidebar-mini">
             <div class="wrapper">
@@ -47,12 +48,12 @@
                     <!-- envoltura header -->
                     <section class="content-header">
                         <h1>
-                            Generar Trámite
+                            Pagar Trámite
                         </h1>
                         <ol class="breadcrumb">
                             <li><a href="srvUsuario?accion=index"><i class="fa fa-dashboard"></i> Inicio</a>
                             </li>
-                            <li class="active">Generar Trámite</li>
+                            <li class="active">Pagar Trámite</li>
                         </ol>
                     </section>
 
@@ -61,29 +62,27 @@
                             <div class="card-header bg-body-secondary border-0 py-3">
                                 <h6 class="m-0">Resumen de la información</h6>
                             </div>
-                            <div class="card-body">
+                            <div class="box-body">
+                                <form action="svrconstancia?accion=generarpdf" method="post" style="max-width: 500px; margin-left: auto; margin-right: auto;">
                                 <div class="table-responsive">
                                     <table class="table">
                                         <tbody>
                                             <tr>
                                                 <td><strong>Nombre</strong></td>
-                                                <td>Luis Armando</td>
+                                                <td>${sessionScope.Nombre}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Apellido</strong></td>
-                                                <td>Bailon Victorio</td>
+                                                <td>${sessionScope.Apellido}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>DNI</strong></td>
-                                                <td>12345678</td>
+                                                <td>${sessionScope.Dni}</td>
                                             </tr>
-                                            <tr>
-                                                <td><strong>Dirección</strong></td>
-                                                <td>Av. Los Arquitectos Calle Los Geranios</td>
-                                            </tr>
+                                           
                                             <tr>
                                                 <td><strong>Tipo de trámite</strong></td>
-                                                <td>Constancia de Posesión</td>
+                                                <td>${sessionScope.Tipo_tramite}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong><span style="color: rgb(33, 37, 41);">Total a pagar</span></strong></td>

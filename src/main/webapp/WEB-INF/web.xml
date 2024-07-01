@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-   version="4.0">
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
     <servlet>
         <servlet-name>srvUsuario</servlet-name>
         <servlet-class>Controller.srvUsuario</servlet-class>
@@ -19,6 +16,10 @@
         <servlet-name>pruebajax</servlet-name>
         <servlet-class>Controller.pruebajax</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>svrconstancia</servlet-name>
+        <servlet-class>Controller.svrconstancia</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>srvUsuario</servlet-name>
         <url-pattern>/srvUsuario</url-pattern>
@@ -34,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>pruebajax</servlet-name>
         <url-pattern>/pruebajax</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svrconstancia</servlet-name>
+        <url-pattern>/svrconstancia</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

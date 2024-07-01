@@ -19,11 +19,11 @@ public class Conexion {
     }
 
     protected void conectar(boolean wTransaccion) throws Exception {
-        String url = "jdbc:mysql://" + "mysql5048.site4now.net" + ":3306/db_a6194c_muni?useSSL=false";
+        String url = "jdbc:mysql://" + "127.0.0.1" + ":3306/municipalidad?useSSL=false";
  
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexion = DriverManager.getConnection(url, "a6194c_muni", "muni202306");
+            conexion = DriverManager.getConnection(url, "root", "joseernesto");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
@@ -35,6 +35,7 @@ public class Conexion {
             this.transaccionIniciada = false;
         }
     }
+    
 
     protected void cerrar(boolean wEstado) throws Exception {
         if (this.conexion != null) {

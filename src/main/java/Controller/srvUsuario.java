@@ -23,6 +23,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "srvUsuario", urlPatterns = {"/srvUsuario"})//linea para indicar la ruta
+
+
 public class srvUsuario extends HttpServlet {
 
     //metodo para indicar acciones realizadas dentro del dashboard

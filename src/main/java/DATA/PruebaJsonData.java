@@ -14,7 +14,7 @@ import org.json.JSONObject;
  *
  * @author User
  */
-public class JsonData {
+public class PruebaJsonData {
 
     public static String getDataFrom(JSONObject json, String rutaJson) {
 

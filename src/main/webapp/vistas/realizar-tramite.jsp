@@ -55,23 +55,24 @@
                             <h3 class="box-title">Rellena los datos</h3>
                         </div>
                         <div class="box-body">
-                            <form style="max-width: 500px; margin-left: auto; margin-right: auto;">
+                            <form action="svrconstancia?accion=guardartramite" method="post" style="max-width: 500px; margin-left: auto; margin-right: auto;">
                                 <div class="mb-3">
+                                    
                                     <label for="form-label nombre">Nombres</label>
-                                    <input class="form-control" type="text" id="nombre" name="nombre" placeholder="example" equired="">
+                                    <input class="form-control" type="text" id="nombre" name="nombrePAG" placeholder="example" equired="">
                                 </div>
                                 <div class="mb-3">
                                     <label for="form-label apellido">Apellidos</label>
-                                    <input class="form-control" type="text" id="apellido" name="apellido" placeholder="example" required="">
+                                    <input class="form-control" type="text" id="apellido" name="apellidoPAG" placeholder="example" required="">
                                 </div>
                                 <div class="mb-3">
                                     <label for=" form-label dni">Número de DNI</label>
-                                    <input class="form-control" type="text" id="dni" name="dni" placeholder="example" required="" inputmode="numeric">
+                                    <input class="form-control" type="text" id="dni" name="dniPAG" placeholder="example" required="" inputmode="numeric">
                                 </div>
                                 <div class="mb-3 mt-3">
                                     <br> 
                                     <label for="form-label tipo-tramite">Tipo de trámite</label>
-                                    <select class="form-select" id="tipo-tramite" name="tipo-tramite" required="">
+                                    <select class="form-select" id="tipo-tramite" name="tipo-tramitePAG" required="">
                                         <option value="">Seleccione el tipo de trámite</option>
                                         <option value="contancia-domicilio">Constancia de domicilio</option>
                                         <option value="certificado-posesion">Certificado de Posesión</option>
@@ -81,6 +82,14 @@
                                 <br>
                                 
                                     <input class="btn btn-primary" type="submit" value="Generar Trámite">
+                            </form>
+                            
+                            <form>
+                                
+                                
+                                
+                                
+                                
                             </form>
                         </div>
                     </div>

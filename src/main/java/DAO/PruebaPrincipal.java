@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class usuarioDAO extends Conexion {
+public class PruebaPrincipal extends Conexion {
 
     //metodo que permite identificar el cargo del usuario que ingrese al sistema
     public usuario identificar(usuario user) throws Exception {

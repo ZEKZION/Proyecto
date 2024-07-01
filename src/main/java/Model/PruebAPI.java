@@ -15,7 +15,7 @@ import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class ConexionAPI {
+public class PruebAPI {
 
     public reniec_dni consultarDNI(String dni) throws Exception {
         reniec_dni responseDNI = null;
